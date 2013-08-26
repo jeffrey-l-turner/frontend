@@ -53,7 +53,7 @@ module.exports = function (grunt) {
     connect: {
       app: {
         options: {
-          port: 9000,
+          port: 8080,
           hostname: '*',
           middleware: function (connect) {
             return [
@@ -81,7 +81,7 @@ module.exports = function (grunt) {
       dist: {
         options: {
           keepalive: true,
-          port: 9000,
+          port: 8080,
           hostname: '*',
           middleware: function (connect) {
             return [
