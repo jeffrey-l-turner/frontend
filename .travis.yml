@@ -3,14 +3,15 @@ language: node_js
 node_js:
   - 0.8
 
-before_script:
+install:
+  - npm install
   - npm install --quiet -g grunt-cli
   - npm install --quiet -g bower
   - bower install
-  - sleep 1 # let server start
-
-script: grunt test
-
+before_script:
+  - sleep 1
+script: 
+    - grunt test
 notifications:
   irc:
     channels: "chat.freenode.net#bs-staff"
